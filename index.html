@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/fevicon.png" type="">
+
+  <title> Carint </title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<script>
+  function openEmail() {
+    const message = document.getElementById('requestMessage').value;
+    const email = "support@skyanchorlogistics.com"; // replace with your real support email
+    const subject = "Service Request - SkyAnchor Logistics";
+    const body = encodeURIComponent(message);
+
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${body}`;
+  }
+
+  function sendMail() {
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const subject = `Contact Request from ${name}`;
+    const body = `Name: ${name}%0D%0APhone: ${phone}%0D%0AEmail: ${email}%0D%0AMessage: ${message}`;
+
+    window.location.href = `mailto:support@skyanchorlogistics.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  }
+
+  
+
+
+</script>
+
+
+<body>
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid ">
+          <div class="contact_nav d-flex justify-content-between align-items-center">
+            <!-- Left: Location -->
+            <div>
+              <a href="" class="d-flex align-items-center text-white">
+                <i class="fa fa-map-marker" aria-hidden="true" style="margin-right: 5px;"></i>
+                <span>Vaishali</span>
+              </a>
+            </div>
+          
+            <!-- Right: Mail & LinkedIn -->
+            <div class="d-flex">
+              <a href="tel:+01123455678990" class="ml-3">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:demo@gmail.com" class="ml-3">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" class="ml-3">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="https://www.instagram.com" target="_blank" class="ml-3">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                Skyanchor
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="career.html">Career</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Tools & Utilities
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="toolsDropdown">
+                    <a class="dropdown-item" href="#">Tool 1</a>
+                    <a class="dropdown-item" href="#">Tool 2</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Utility 1</a>
+                  </div>
+                </li>
+                
+                
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+ 
+<!-- slider section -->
+<section class="slider_section">
+  <div class="custom-slider" id="customSlider">
+    <div class="slides">
+
+      <!-- Slide 1: Ocean Freight -->
+      <div class="slide active" style="background-image: url('images/water.jpg');">
+        <div class="content">
+          <h1>Ocean Freight<br>Global Reach</h1>
+          <p>Affordable and reliable shipping solutions across the seas.</p>
+          <a href="ocean-freight.html" class="btn1">Explore Ocean Freight</a>
+        </div>
+      </div>
+
+      <!-- Slide 2: Air Freight -->
+      <div class="slide" style="background-image: url('images/air.jpg');">
+        <div class="content">
+          <h1>Air Freight<br>Speed & Precision</h1>
+          <p>Fast delivery worldwide through secure air cargo services.</p>
+          <a href="air-freight.html" class="btn1">Explore Air Freight</a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Road Freight -->
+      <div class="slide" style="background-image: url('images/road.jpg');">
+        <div class="content">
+          <h1>Road Freight<br>Reliable Ground Transport</h1>
+          <p>Nationwide trucking solutions with real-time tracking and support.</p>
+          <a href="road-freight.html" class="btn1">Explore Road Freight</a>
+        </div>
+      </div>
+
+      <!-- Slide 4: Custom Clearance -->
+      <div class="slide" style="background-image: url('images/custom.jpg');">
+        <div class="content">
+          <h1>Custom Clearance<br>Simplified Borders</h1>
+          <p>We handle documentation and compliance for smooth customs processing.</p>
+          <a href="custom-clearance.html" class="btn1">Explore Clearance</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Arrows -->
+    <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
+    <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
+  </div>
+</section>
+   
+    <!-- end slider section -->
+  </div>
+
+  
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container  ">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                About <span>Us</span>
+              </h2>
+            </div>
+            <p>
+              At Skyanchor Logistics, we specialize in delivering seamless, end-to-end transportation and supply chain solutions that empower businesses to move forward with confidence. Whether by land, sea, or air, we offer tailored logistics services backed by industry expertise, cutting-edge technology, and a commitment to reliability. Our global reach, local know-how, and customer-first approach make us a trusted partner in helping you navigate the complexities of modern logistics — efficiently and securely.
+            </p>
+            
+            
+          </div>
+        </div>
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.jpg" alt="">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <section class="skyanchor_services_section">
+    <div class="services-container">
+      <!-- Air Freight -->
+      <div class="service-box">
+        <i class="fas fa-plane-departure icon"></i>
+        <h3>Air Freight</h3>
+        <p>Fast and reliable global air cargo solutions with real-time tracking.</p>
+      </div>
+  
+      <!-- Ocean Freight -->
+      <div class="service-box">
+        <i class="fas fa-ship icon"></i>
+        <h3>Ocean Freight</h3>
+        <p>Cost-effective maritime shipping with container management.</p>
+      </div>
+  
+      <!-- Road Freight -->
+      <div class="service-box">
+        <i class="fas fa-truck-moving icon"></i>
+        <h3>Road Freight</h3>
+        <p>Efficient overland transportation network across continents.</p>
+      </div>
+  
+      <!-- Custom Clearance -->
+      <div class="service-box custom-clearance">
+        <i class="fas fa-file-contract icon"></i>
+        <h3>Custom Clearance</h3>
+        <p>Smooth customs processing and documentation handling.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  
+
+  <!-- track section -->
+
+  <section class="track_section layout_padding">
+    <div class="track_bg_box">
+      <img src="images/track-bg.jpg" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="heading_container">
+            <h2>
+              Request a Service
+            </h2>
+          </div>
+          <p>
+            Need help with shipping, tracking, or logistics? Fill in your service request and we'll draft your message in your email app — ready to send!
+          </p>
+          <form id="requestForm" onsubmit="openEmail(); return false;">
+            <input type="text" id="requestMessage" placeholder="Enter your service request" required />
+            <button type="submit">Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  
+
+  <!-- end track section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Text Content -->
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                Our <span>Certifications</span>
+              </h2>
+            </div>
+            <p>
+              SkyAnchor Logistics is proud to be recognized for maintaining high industry standards. Our certifications reflect our commitment to quality, operational excellence, and trustworthiness. With MSME and ISO certifications, we ensure that every service we offer meets the highest benchmarks of reliability, compliance, and efficiency.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Image Box with Background -->
+        <div class="col-md-6">
+          <div class="cert-box" style="background: #04233b; padding: 30px; border-radius: 12px; display: flex; justify-content: center; align-items: center; gap: 20px;">
+            <img src="images/msme.png" alt="MSME Certified" style="width: 150px; height: 100px; object-fit: contain; background: white; padding: 10px; border-radius: 6px;">
+            <img src="images/iso.png" alt="ISO Certified" style="width: 150px; height: 100px; object-fit: contain; background: white; padding: 10px; border-radius: 6px;">
+          </div>
+        </div>
+        
+        
+  
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+  <!-- contact section -->
+  <section class="contact_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-4 col-md-5 offset-md-1">
+          <div class="heading_container">
+            <h2>
+              Contact Us
+            </h2>
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <!-- Form Column -->
+        <div class="col-lg-4 col-md-5 offset-md-1">
+          <div class="form_container contact-form">
+            <form onsubmit="sendMail(); return false;">
+              <div>
+                <input type="text" id="name" placeholder="Your Name" required />
+              </div>
+              <div>
+                <input type="text" id="phone" placeholder="Phone Number" required />
+              </div>
+              <div>
+                <input type="email" id="email" placeholder="Email" required />
+              </div>
+              <div>
+                <input type="text" id="message" class="message-box" placeholder="Message" required />
+              </div>
+              <div class="btn_box">
+                <button type="submit">
+                  SEND
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+  
+        <!-- Map Column -->
+        <div class="col-lg-7 col-md-6 px-0">
+          <div class="map_container position-relative" style="height: 400px;">
+            <div class="map" style="width: 100%; height: 100%;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.4144123072515!2d77.33436137524198!3d28.64730777565679!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfbe8ba14581d%3A0x28b7b1499e5e640d!2sMahalaxmi%20Metro%20Tower!5e0!3m2!1sen!2sin!4v1744894098236!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style="border: 0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+          
+              <!-- 📍 Pin Animation -->
+              <div class="map-pin"></div>
+          
+              <!-- 🧾 Overlay Contact Info -->
+              <div class="map-overlay">
+                <h5>SkyAnchor Logistics</h5>
+                <p>Mahalaxmi Metro Tower, Vaishali, Uttar Pradesh, India</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Contact Info -->
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>Address</h4>
+            <div class="contact_link_box">
+              <a href="https://www.google.com/maps?q=TF-12,+Mahaluxmi+Metro+Tower,+Sec-4+Vaishali,+Ghaziabad" target="_blank">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>TF-12, Mahaluxmi Metro Tower, Sec-4 Vaishali, Ghaziabad</span>
+              </a>
+              <a href="tel:+919818389040">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>+91 98183 89040</span>
+              </a>
+              <a href="mailto:amit@skyanchors.com">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>contact@skyanchors.com</span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+          
+            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+  
+        <!-- Info Text -->
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>Info</h4>
+            <p>
+              Skyanchor Logistics offers end-to-end logistics, freight forwarding, and supply chain solutions with a commitment to precision and reliability.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Navigation Links -->
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>Links</h4>
+            <div class="info_links">
+              <a href="index.html">Home</a>
+              <a href="service.html">Services</a>
+              <a href="about.html">About</a>
+              <a href="contact.html">Contact Us</a>
+              <a href="career.html">Career</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Brochure Download -->
+        <div class="col-md-6 col-lg-3 info_col text-center">
+          <h4>Our Brochure</h4>
+          <a href="docs/SkyAnchor-Brochure.pdf" download class="btn1">
+            <i class="fa fa-file-pdf-o" aria-hidden="true"></i> Download PDF
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved 
+        <a href="">Skyanchor Logistics</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+<!-- Floating WhatsApp Icon (Desktop Only, No Background) -->
+<a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float-icon d-none d-lg-block" aria-label="Chat on WhatsApp">
+  <img src="images/whatsapp-icon.svg" alt="WhatsApp Logo" class="whatsapp-icon">
+</a>
+
+
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+  
+
+</body>
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function changeSlide(direction) {
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    document.querySelector(".slides").style.transform = `translateX(-${currentSlide * 100}%)`;
+    slides[currentSlide].classList.add("active");
+  }
+</script>
+
+
+
+</html>
