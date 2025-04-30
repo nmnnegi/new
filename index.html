@@ -31,6 +31,103 @@
   <!-- Custom styles -->
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
+  <style>
+    /* Hero Section Styles */
+    .hero_area {
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+
+    #mainCarousel {
+        height: 100vh;
+    }
+
+    .carousel-item {
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+    }
+
+    .carousel-item::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .carousel-caption {
+        height: 100%;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        z-index: 2;
+    }
+
+    .carousel-content {
+        max-width: 1200px;
+        width: 100%;
+        padding: 0 15px;
+    }
+
+    /* Carousel Controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        background: #065968;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 1;
+        transition: all 0.3s ease;
+    }
+
+    .carousel-control-prev:hover,
+    .carousel-control-next:hover {
+        background: #065968;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .carousel-control-prev {
+        left: 30px;
+    }
+
+    .carousel-control-next {
+        right: 30px;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .carousel-caption h1 {
+            font-size: 2rem !important;
+        }
+        
+        .carousel-caption p {
+            font-size: 1rem !important;
+        }
+        
+        .btn1 {
+            padding: 10px 20px !important;
+        }
+    }
+    /* Add space after hero section */
+    .hero_area {
+      margin-bottom: 90px !important; /* Adjust value as needed */
+    }
+
+    /* Optional: Responsive adjustment */
+    @media (max-width: 768px) {
+      .hero_area {
+        margin-bottom: 60px !important;
+      }
+    }
+</style>
 </head>
 
 <script>
@@ -79,19 +176,20 @@
     
             <!-- Right: Mail & LinkedIn -->
             <div class="d-flex">
-              <a href="tel:+01123455678990" class="ml-3">
+              <a href="tel:+919818389040" class="ml-3">
                 <i class="fa fa-phone" aria-hidden="true"></i>
               </a>
-              <a href="mailto:demo@gmail.com" class="ml-3">
+              <a href="mailto:contact@skyanchors.com" class="ml-3">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
               </a>
-              <a href="https://www.linkedin.com" target="_blank" class="ml-3">
+              <a href="https://www.linkedin.com/in/skyanchor-logistics/" target="_blank" class="ml-3">
                 <i class="fa fa-linkedin" aria-hidden="true"></i>
               </a>
-              <a href="https://www.instagram.com" target="_blank" class="ml-3">
+              <a href="https://www.instagram.com/skyanchor_logistics/?hl=en" target="_blank" class="ml-3">
                 <i class="fa fa-instagram" aria-hidden="true"></i>
               </a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -148,54 +246,68 @@
     <!-- end header section -->
  
 <!-- slider section -->
-<section class="slider_section">
-  <div class="custom-slider" id="customSlider">
-    <div class="slides">
+<!-- Hero Section with Slider -->
+<div class="hero_area">
+  <div id="mainCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <!-- Slide 1: Ocean Freight -->
+          <div class="carousel-item active" style="background-image: url('images/water.jpg');">
+              <div class="carousel-caption">
+                  <div class="carousel-content">
+                      <h1 class="display-4 mb-4">Ocean Freight<br>Global Reach</h1>
+                      <p class="lead mb-4">Affordable and reliable shipping solutions across the seas.</p>
+                      <a href="service.html" class="btn btn-primary btn-lg">Explore Ocean Freight</a>
+                  </div>
+              </div>
+          </div>
 
-      <!-- Slide 1: Ocean Freight -->
-      <div class="slide active" style="background-image: url('images/water.jpg');">
-        <div class="content">
-          <h1>Ocean Freight<br>Global Reach</h1>
-          <p>Affordable and reliable shipping solutions across the seas.</p>
-          <a href="service.html" class="btn1">Explore Ocean Freight</a>
-        </div>
+          <!-- Slide 2: Air Freight -->
+          <div class="carousel-item" style="background-image: url('images/air.jpg');">
+              <div class="carousel-caption">
+                  <div class="carousel-content">
+                      <h1 class="display-4 mb-4">Air Freight<br>Speed & Precision</h1>
+                      <p class="lead mb-4">Fast delivery worldwide through secure air cargo services.</p>
+                      <a href="service.html" class="btn btn-primary btn-lg">Explore Air Freight</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Slide 3: Road Freight -->
+          <div class="carousel-item" style="background-image: url('images/road.jpg');">
+              <div class="carousel-caption">
+                  <div class="carousel-content">
+                      <h1 class="display-4 mb-4">Road Freight<br>Reliable Ground Transport</h1>
+                      <p class="lead mb-4">Nationwide trucking solutions with real-time tracking and support.</p>
+                      <a href="service.html" class="btn btn-primary btn-lg">Explore Road Freight</a>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Slide 4: Custom Clearance -->
+          <div class="carousel-item" style="background-image: url('images/custom.jpg');">
+              <div class="carousel-caption">
+                  <div class="carousel-content">
+                      <h1 class="display-4 mb-4">Custom Clearance<br>Simplified Borders</h1>
+                      <p class="lead mb-4">We handle documentation and compliance for smooth customs processing.</p>
+                      <a href="service.html" class="btn btn-primary btn-lg">Explore Clearance</a>
+                  </div>
+              </div>
+          </div>
       </div>
 
-      <!-- Slide 2: Air Freight -->
-      <div class="slide" style="background-image: url('images/air.jpg');">
-        <div class="content">
-          <h1>Air Freight<br>Speed & Precision</h1>
-          <p>Fast delivery worldwide through secure air cargo services.</p>
-          <a href="service.html" class="btn1">Explore Air Freight</a>
-        </div>
-      </div>
-
-      <!-- Slide 3: Road Freight -->
-      <div class="slide" style="background-image: url('images/road.jpg');">
-        <div class="content">
-          <h1>Road Freight<br>Reliable Ground Transport</h1>
-          <p>Nationwide trucking solutions with real-time tracking and support.</p>
-          <a href="service.html" class="btn1">Explore Road Freight</a>
-        </div>
-      </div>
-
-      <!-- Slide 4: Custom Clearance -->
-      <div class="slide" style="background-image: url('images/custom.jpg');">
-        <div class="content">
-          <h1>Custom Clearance<br>Simplified Borders</h1>
-          <p>We handle documentation and compliance for smooth customs processing.</p>
-          <a href="service.html" class="btn1">Explore Clearance</a>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Arrows -->
-    <button class="arrow prev" onclick="changeSlide(-1)">&#10094;</button>
-    <button class="arrow next" onclick="changeSlide(1)">&#10095;</button>
+      <!-- Carousel Controls -->
+      <a class="carousel-control-prev" href="#mainCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#mainCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
   </div>
-</section>
-   
+</div>
+
+
     <!-- end slider section -->
   </div>
 
@@ -544,17 +656,6 @@
   
 
 </body>
-<script>
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".slide");
-
-  function changeSlide(direction) {
-    slides[currentSlide].classList.remove("active");
-    currentSlide = (currentSlide + direction + slides.length) % slides.length;
-    document.querySelector(".slides").style.transform = `translateX(-${currentSlide * 100}%)`;
-    slides[currentSlide].classList.add("active");
-  }
-</script>
 
 
 
