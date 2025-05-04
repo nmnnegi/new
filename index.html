@@ -127,6 +127,131 @@
         margin-bottom: 60px !important;
       }
     }
+
+
+    .sal-slide-services {
+    padding: 50px 20px;
+    background: #fff;
+    padding-top: 0 !important; /* Adjust or reduce the top padding */
+  margin-top: -30px !important; 
+  }
+  .sal-slide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sal-box {
+    display: block;
+    position: relative;
+    height: 200px;
+    background: #04233b;
+    color: #fff;
+    overflow: hidden;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+  .sal-content {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  .sal-box:hover .sal-content,
+  .sal-box.flipped .sal-content {
+    transform: translateX(-50%);
+  }
+  .sal-front, .sal-back {
+    width: 50%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    background: #04233b;
+  }
+  .sal-title-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .sal-title {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    text-transform: uppercase;
+  }
+  .sal-icon {
+    width: 40px;
+    height: 40px;
+    transition: all 0.4s ease;
+  }
+  .sal-box:hover .sal-back .sal-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+  }
+  .sal-subtitle {
+    font-size: 0.95rem;
+    font-weight: 300;
+  }
+  .sal-back p {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .sal-subservices {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px 0;
+    background: #fafafa;
+  }
+  .sal-subservices a {
+    flex: 1 1 160px;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    background: #f2f2f2;
+    color: #333;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  /* Force the hover color change to white with higher specificity */
+  .sal-subservices a:hover {
+  background: #04233b;
+  color: #fff;
+}
+.sal-box:hover .sal-back,
+.sal-box.flipped .sal-back {
+  color: #fff !important;  /* Make text white on hover */
+  background: #04233b; /* Keep the background color */
+}
+
+
+
+
+
+/* Reduce space between sal-slide-services and sal-subservices */
+.sal-subservices {
+  margin-top: -40px !important;  /* Adjust this value to reduce space */
+}
+/* Add space below sal-subservices */
+.sal-subservices {
+  margin-bottom: 50px !important;  /* Adjust this value to control the space below subservices */
+}
+
+
+
+
+
 </style>
 </head>
 
@@ -151,7 +276,16 @@
 
     window.location.href = `mailto:contact@skyanchors.com?subject=${encodeURIComponent(subject)}&body=${body}`;
   }
+  
 
+  document.querySelectorAll('.sal-box').forEach(box => {
+    box.addEventListener('click', function(e) {
+      if (!this.classList.contains('flipped')) {
+        e.preventDefault();
+        this.classList.add('flipped');
+      }
+    });
+  });
   
 
 
@@ -310,6 +444,75 @@
 
     <!-- end slider section -->
   </div>
+  
+
+  <section class="sal-slide-services">
+    <div class="sal-slide-grid">
+  
+      <!-- SEA FREIGHT -->
+      <a href="#" onclick="return false;" class="sal-box">
+        <div class="sal-content">
+          <div class="sal-front">
+            <div class="sal-title-row">
+              <h2 class="sal-title">SEA FREIGHT</h2>
+              <img src="images/seefracht_icon_white.png" alt="Icon" class="sal-icon">
+            </div>
+            <p class="sal-subtitle">Global shipping via major sea routes.</p>
+          </div>
+          <div class="sal-back">
+            <img src="images/seefracht_icon_white.png" alt="Icon" class="sal-icon">
+            <p>Reliable and secure ocean freight with tracking and customs support.</p>
+          </div>
+        </div>
+      </a>
+  
+      <!-- AIR FREIGHT -->
+      <a href="#" onclick="return false;" class="sal-box">
+        <div class="sal-content">
+          <div class="sal-front">
+            <div class="sal-title-row">
+              <h2 class="sal-title">AIR FREIGHT</h2>
+              <img src="images/luftfracht_icon_white.png" alt="Icon" class="sal-icon">
+            </div>
+            <p class="sal-subtitle">Fast, flexible, and efficient air cargo solutions.</p>
+          </div>
+          <div class="sal-back">
+            <img src="images/luftfracht_icon_white.png" alt="Icon" class="sal-icon">
+            <p>Time-sensitive air transport with trusted global partners.</p>
+          </div>
+        </div>
+      </a>
+  
+      <!-- RAIL FREIGHT -->
+      <a href="#" onclick="return false;" class="sal-box">
+        <div class="sal-content">
+          <div class="sal-front">
+            <div class="sal-title-row">
+              <h2 class="sal-title">RAIL FREIGHT</h2>
+              <img src="images/bahnfracht_icon_white.png" alt="Icon" class="sal-icon">
+            </div>
+            <p class="sal-subtitle">Efficient cross-border rail delivery.</p>
+          </div>
+          <div class="sal-back">
+            <img src="images/bahnfracht_icon_white.png" alt="Icon" class="sal-icon">
+            <p>Reliable rail logistics with cost-effective solutions.</p>
+          </div>
+        </div>
+      </a>
+  
+    </div>
+  </section>
+  
+  <nav class="sal-subservices">
+    <a href="#" onclick="return false;">PROJECT CARGO</a>
+    <a href="#" onclick="return false;">CUSTOMS SERVICE</a>
+    <a href="#" onclick="return false;">EXPORT PACKING</a>
+    <a href="#" onclick="return false;">WAREHOUSING</a>
+    <a href="#" onclick="return false;">CONSULTING</a>
+  </nav>
+  
+
+  
 
   
   <!-- about section -->
@@ -343,64 +546,9 @@
 
   <!-- end about section -->
 
-  <section class="skyanchor_services_section">
-    <div class="services-container">
-      <!-- Air Freight -->
-      <div class="service-box">
-        <i class="fas fa-plane-departure icon"></i>
-        <h3>Air Freight</h3>
-        <p>Fast and reliable global air cargo solutions with real-time tracking.</p>
-      </div>
   
-      <!-- Ocean Freight -->
-      <div class="service-box">
-        <i class="fas fa-ship icon"></i>
-        <h3>Ocean Freight</h3>
-        <p>Cost-effective maritime shipping with container management.</p>
-      </div>
-  
-      <!-- Road Freight -->
-      <div class="service-box">
-        <i class="fas fa-truck-moving icon"></i>
-        <h3>Road Freight</h3>
-        <p>Efficient overland transportation network across continents.</p>
-      </div>
-  
-      <!-- Custom Clearance -->
-      <div class="service-box custom-clearance">
-        <i class="fas fa-file-contract icon"></i>
-        <h3>Custom Clearance</h3>
-        <p>Smooth customs processing and documentation handling.</p>
-      </div>
-  
-      <!-- Warehouse Solution -->
-      <div class="service-box">
-        <i class="fas fa-warehouse icon"></i>
-        <h3>Warehouse Solution</h3>
-        <p>Secure, scalable warehousing and distribution facilities for your logistics needs.</p>
-      </div>
-      <div class="service-box">
-        <i class="fas fa-boxes icon"></i>
-        <h3>Project Loads</h3>
-        <p>End-to-end handling of oversized or complex shipments with specialized logistics planning.</p>
-      </div>
-  
-      <!-- Export Packaging -->
-      <div class="service-box">
-        <i class="fas fa-box-open icon"></i>
-        <h3>Export Packaging</h3>
-        <p>Durable, compliant packaging solutions designed to protect goods during international transit.</p>
-      </div>
-  
-      <!-- Logistics Advisory -->
-      <div class="service-box">
-        <i class="fas fa-user-tie icon"></i>
-        <h3>Logistics Advisory</h3>
-        <p>Expert consulting to optimize your supply chain, reduce costs, and boost operational efficiency.</p>
-      </div>
-    </div>
 
-  </section>
+
   
 
   
